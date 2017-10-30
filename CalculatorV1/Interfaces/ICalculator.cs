@@ -7,8 +7,6 @@ namespace CalculatorV1.Interfaces
         ICalculator Add(int value);
         ICalculator Sub(int value);
         ICalculator SignRevert();
-        ICalculator Set(int value);
-        ICalculator Reset();
         int Result { get; }
     }
 }
