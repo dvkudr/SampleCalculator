@@ -7,6 +7,19 @@ namespace Tests.CalculatorV1
     [TestFixture]
     public class CalculatorTests
     {
+        [Test]
+        public void ShouldNewResultZero()
+        {
+            // arrange
+            var instance = CreateInstance();
+
+            // act
+            var result = instance.Result;
+
+            // assert
+            Assert.AreEqual(0, result);
+        }
+
         [TestCase(0)]
         [TestCase(1)]
         [TestCase(1000)]
@@ -15,7 +28,7 @@ namespace Tests.CalculatorV1
         public void ShouldAddValue(int value)
         {
             // arrange
-            var instance = CrerateInstance();
+            var instance = CreateInstance();
 
             // act
             var result = instance.Add(value).Result;
@@ -32,7 +45,7 @@ namespace Tests.CalculatorV1
         public void ShouldSubValue(int value)
         {
             // arrange
-            var instance = CrerateInstance();
+            var instance = CreateInstance();
 
             // act
             var result = instance.Sub(value).Result;
@@ -49,7 +62,7 @@ namespace Tests.CalculatorV1
         public void ShouldSignRevertValue(int value)
         {
             // arrange
-            var instance = CrerateInstance();
+            var instance = CreateInstance();
 
             // act
             var result = instance.Add(value).SignRevert().Result;
@@ -59,10 +72,10 @@ namespace Tests.CalculatorV1
         }
 
         [Test]
-        public void Should_CalculateIndependently()
+        public void ShouldCalculateIndependently()
         {
             // arrange
-            var instance1 = CrerateInstance();
+            var instance1 = CreateInstance();
             var instance2 = instance1.Add(42);
 
             // act
@@ -74,7 +87,7 @@ namespace Tests.CalculatorV1
             Assert.AreEqual(142, result2);
         }
 
-        private Calculator CrerateInstance()
+        private Calculator CreateInstance()
         {
             return new Calculator();
         }

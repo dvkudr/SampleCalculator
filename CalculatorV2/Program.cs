@@ -8,7 +8,7 @@ namespace CalculatorV2
         static void Main(string[] args)
         {
             var calculator = new Calculator(new Adder(), new Substractor(), new SignReverter());
-            Console.WriteLine(calculator.Add(42).Sub(100).SignRevert().Result);
+            Console.WriteLine(calculator.Add(58).Sub(100).SignRevert().Result);
         }
     }
 }

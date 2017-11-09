@@ -55,7 +55,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CalculatorTests.cs" />
+    <Compile Include="BusinessLogic\AdderTests.cs" />
+    <Compile Include="BusinessLogic\CalculatorTests.cs" />
+    <Compile Include="BusinessLogic\SignReversalTests.cs" />
+    <Compile Include="BusinessLogic\SubstractorTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

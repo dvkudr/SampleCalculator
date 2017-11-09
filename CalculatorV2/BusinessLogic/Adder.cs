@@ -7,7 +7,7 @@ namespace CalculatorV2.BusinessLogic
     {
         public int Add(int x, int y)
         {
-            return x + y;
+            return checked (x + y);
         }
     }
 }

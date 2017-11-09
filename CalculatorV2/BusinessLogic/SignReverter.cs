@@ -7,7 +7,7 @@ namespace CalculatorV2.BusinessLogic
     {
         public int SignRevert(int x)
         {
-            return -x;
+            return checked (-x);
         }
     }
 }
